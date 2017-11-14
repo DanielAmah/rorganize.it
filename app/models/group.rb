@@ -46,7 +46,7 @@ class Group < ActiveRecord::Base
   validates :country, presence: true
 
   mount_uploader :picture, PictureUploader
-  geocoded_by :location
+  geocoded_by :location, :lookup => :mapbox
   after_validation :geocode
 
   before_save :capitalize_fields
