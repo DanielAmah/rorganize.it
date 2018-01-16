@@ -9,7 +9,6 @@ nav.navbar {
   padding: 0 2rem;
   border-bottom: 2px solid $light-grey;
 
-
   @media (max-width: $mq-large) {
     .header-logo {
       order: 1;
@@ -47,6 +46,11 @@ nav.navbar {
   flex: 3;
 
   li {
+    @media (max-width: $mq-med) {
+      &:first-of-type a {
+        padding-left: 0;
+      }
+    }
     a {
       border-top: 4px solid transparent;
       &:hover,
@@ -54,9 +58,6 @@ nav.navbar {
       &:active {
         color: $salmon-pink;
         border-color: $salmon-pink;
-      }
-      &:first-of-type {
-        padding-left: 0;
       }
     }
     &.active a {
@@ -117,10 +118,10 @@ nav.navbar {
 // INFO: Padding used to keep hover-border at the very top
 .header-logo,
 .main-nav li a {
-  padding-top: 1.3rem;
-  padding-bottom: 1.4rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .sign-in {
